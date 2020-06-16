@@ -1,9 +1,124 @@
+$color-blue: #0a4c7e;
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
-  background: grey;
+  background: $color-blue;
+  color: #fff;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 2px black;
+  width: 100%;
+  position: fixed;
+
+  nav {
+    color: #000;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+      padding: 10px 0;
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      img {
+        height: 80px;
+      }
+    }
+
+    ul {
+      width: 90%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style: none;
+
+      li {
+
+        a {
+          padding: 10px;
+          margin: 10px;
+          color: $color-blue;
+          font-size: 24px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          transition: all .2s ease-in-out;
+
+          &:hover, &:focus, &:active {
+            border-bottom: 3px solid $color-blue;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+footer {
+  background: #252424;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    .pageName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      img {
+        height: 40px;
+        margin-right: 10px;
+        color: #fff;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+
+        a {
+          font-size: 30px;
+          padding: 6px;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+
+article {
+  padding-top: 100px;
+  min-height: 100vh;
 }

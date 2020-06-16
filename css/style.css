@@ -2,9 +2,129 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
 }
 
 body {
-  background: grey;
+  background: #0a4c7e;
+  color: #fff;
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 2px black;
+  width: 100%;
+  position: fixed;
+}
+
+header nav {
+  color: #000;
+  max-width: 90%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+header nav .logo {
+  padding: 10px 0;
+  width: 10%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+header nav .logo img {
+  height: 80px;
+}
+
+header nav ul {
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px;
+  margin: 10px;
+  color: #0a4c7e;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all .2s ease-in-out;
+}
+
+header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+  border-bottom: 3px solid #0a4c7e;
+}
+
+footer {
+  background: #252424;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+footer .container {
+  width: 90%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 10px;
+}
+
+footer .container .pageName {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 22px;
+}
+
+footer .container .pageName img {
+  height: 40px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+footer .container ul {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container ul li a {
+  font-size: 30px;
+  padding: 6px;
+  margin: 0 10px;
+}
+
+article {
+  padding-top: 100px;
+  min-height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
