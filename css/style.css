@@ -216,6 +216,7 @@ article#store .productsContainer .productBox .btnWrapper button:hover {
 article#store .cart {
   border-top: 4px solid #0a4c7e;
   font-size: 26px;
+  background: grey;
 }
 
 article#store .cart h1 {
@@ -330,6 +331,30 @@ article#store .cart .cartProductRow .cartRowQuantity button:hover {
 
 article#store .cart .cartProductRow .cartRowQuantity button:hover i {
   color: #fff;
+}
+
+article#store .cart .totalPriceSection {
+  font-size: 30px;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  -ms-flex-align: center;
+      align-items: center;
+  text-align: center;
+  width: 30%;
+  border-top: 2px solid #0a4c7e;
+  padding: 10px;
+}
+
+article#store .cart .totalPriceSection .totalTitle {
+  margin-right: 20px;
+}
+
+article#store .cart .totalPriceSection .totalPrice {
+  font-size: 40px;
+  font-weight: bold;
 }
 
 article#store .cart img {
