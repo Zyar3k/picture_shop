@@ -23,6 +23,19 @@ function ready() {
     const button = addToCartButtons[i];
     button.addEventListener('click', addToCartClicked);
   }
+
+  document.querySelector('#purchaseBtn').addEventListener('click', purchaseClicked);
+}
+
+function purchaseClicked() {
+  alert('Dziękujemy za zakupy!!');
+  const cartProducts = document.querySelector('.cartProductsContainer');
+  console.log(cartProducts)
+  while (cartProducts.hasChildNodes()) {
+    cartProducts.removeChild(cartProducts.firstChild)
+  }
+
+  updateCartTotal();
 }
 
 function removeCartItem(event) {
