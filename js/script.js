@@ -1,7 +1,7 @@
 if (document.readyState == 'loading') {
   document.addEventListener('DOMContentLoaded', ready);
 } else {
-  ready()
+  ready();
 }
 
 
@@ -14,6 +14,22 @@ function ready() {
 
     removeButton.addEventListener('click', removeCartItem);
   }
+
+  const quantityInputs = document.querySelectorAll('.cartRowQuantity input');
+
+  for (let i = 0; i < quantityInputs.length; i++) {
+    const input = quantityInputs[i];
+    input.addEventListener('change', quantityChanged);
+  }
+}
+
+function quantityChanged(event) {
+  const input = event.target;
+
+  if (isNaN(input.value) || input.value <= 0) {
+    input.value = 1;
+  }
+  updateCartTotal();
 }
 
 function removeCartItem(event) {
@@ -37,7 +53,7 @@ function updateCartTotal() {
     const quantity = parseInt(quantityEl.value);
     total = total + (price * quantity);
   }
-
+  total = Math.round(total * 100) / 100;
   document.querySelector('.totalPrice').innerText = total + '$';
 }
 
