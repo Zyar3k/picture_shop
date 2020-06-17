@@ -23,18 +23,18 @@ function ready() {
   }
 }
 
+function removeCartItem(event) {
+  const buttonClicked = event.target;
+  buttonClicked.parentElement.parentElement.parentElement.remove();
+  updateCartTotal();
+}
+
 function quantityChanged(event) {
   const input = event.target;
 
   if (isNaN(input.value) || input.value <= 0) {
     input.value = 1;
   }
-  updateCartTotal();
-}
-
-function removeCartItem(event) {
-  const buttonClicked = event.target;
-  buttonClicked.parentElement.parentElement.parentElement.remove();
   updateCartTotal();
 }
 
@@ -57,4 +57,3 @@ function updateCartTotal() {
   document.querySelector('.totalPrice').innerText = total + '$';
 }
 
-// updateCartTotal()

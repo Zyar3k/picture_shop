@@ -216,7 +216,6 @@ article#store .productsContainer .productBox .btnWrapper button:hover {
 article#store .cart {
   border-top: 4px solid #0a4c7e;
   font-size: 26px;
-  background: grey;
 }
 
 article#store .cart h1 {
