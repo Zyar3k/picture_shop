@@ -1,140 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  scroll-padding-top: 100px;
-}
-
-body {
-  line-height: 1.6;
-  font-family: 'Montserrat', sans-serif;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header {
-  background: #fff;
-  box-shadow: 0 1px 2px #0a4c7e;
-  width: 100%;
-  position: fixed;
-}
-
-header nav {
-  color: #000;
-  max-width: 96%;
-  margin: 0 auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
-header nav .logo {
-  padding: 10px 0;
-  width: 10%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  text-align: center;
-}
-
-header nav .logo img {
-  height: 80px;
-}
-
-header nav ul {
-  width: 90%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  -ms-flex-align: center;
-      align-items: center;
-  list-style: none;
-}
-
-header nav ul li a {
-  padding: 10px;
-  margin: 10px;
-  color: #0a4c7e;
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  transition: all .2s ease-in-out;
-}
-
-header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
-  border-bottom: 3px solid #0a4c7e;
-}
-
-footer {
-  background: #0a4c7e;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  right: 0;
-  box-shadow: 0 -1px 2px black;
-}
-
-footer .container {
-  max-width: 96%;
-  margin: 0 auto;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  padding: 0 10px;
-}
-
-footer .container .pageName {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  font-size: 22px;
-  color: #fff;
-}
-
-footer .container .pageName img {
-  height: 40px;
-  margin-right: 10px;
-}
-
-footer .container ul {
-  list-style: none;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-footer .container ul li a {
-  font-size: 30px;
-  padding: 6px;
-  margin: 0 10px;
-}
-
-article {
-  padding-top: 100px;
-  padding-bottom: 50px;
-  width: 90%;
-  margin: 0 auto;
-  min-height: 100vh;
-}
-
-article .container {
-  padding: 10px;
-}
-
 article#store .subpageTitle {
+  color: #0a4c7e;
   text-align: center;
   font-size: 40px;
   border-bottom: 4px solid #0a4c7e;
@@ -190,6 +55,15 @@ article#store .productsContainer .productBox .imgWrapper img {
   transition: ease-in-out .3s;
 }
 
+article#store .productsContainer .productBox .imgWrapper img:hover {
+  cursor: zoom-in;
+}
+
+article#store .productsContainer .productBox .imgWrapper img.scale {
+  transform: scale(1.8);
+  cursor: zoom-out;
+}
+
 article#store .productsContainer .productBox .btnWrapper {
   width: 100%;
   border-top: 2px solid  #b8ccd9;
@@ -205,7 +79,7 @@ article#store .productsContainer .productBox .btnWrapper button {
   width: 180px;
   border: none;
   outline: none;
-  color: #fff;
+  color: #ffffff;
   border-radius: 6px;
   text-transform: uppercase;
   cursor: pointer;
@@ -327,11 +201,11 @@ article#store .cart .cartProductRow .cartRowQuantity button:focus {
 
 article#store .cart .cartProductRow .cartRowQuantity button:hover {
   background: red;
-  color: #fff;
+  color: #ffffff;
 }
 
 article#store .cart .cartProductRow .cartRowQuantity button:hover i {
-  color: #fff;
+  color: #ffffff;
 }
 
 article#store .cart .totalPriceSection {
@@ -384,5 +258,160 @@ article#store .cart .purchaseSection a:hover {
 
 article#store .cart img {
   width: 140px;
+}
+
+article#store #toTopButton {
+  color: #0a4c7e;
+  font-size: 50px;
+  position: fixed;
+  right: 30px;
+  bottom: 100px;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+  opacity: 0;
+}
+
+article#store #toTopButton:hover {
+  color: #0a257e;
+}
+
+article#store #toTopButton.appear {
+  opacity: 1;
+  cursor: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header {
+  background: #ffffff;
+  box-shadow: 0 1px 2px #0a4c7e;
+  width: 100%;
+  position: fixed;
+}
+
+header nav {
+  max-width: 96%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+header nav .logo {
+  padding: 10px 0;
+  width: 10%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+header nav .logo img {
+  height: 80px;
+}
+
+header nav ul {
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px;
+  margin: 10px;
+  color: #0a4c7e;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all .2s ease-in-out;
+}
+
+header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+  border-bottom: 3px solid #0a4c7e;
+}
+
+footer {
+  background: #0a4c7e;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 -1px 2px black;
+}
+
+footer .container {
+  max-width: 96%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 10px;
+}
+
+footer .container .pageName {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 22px;
+  color: #fff;
+}
+
+footer .container .pageName img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+footer .container ul {
+  list-style: none;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container ul li a {
+  font-size: 30px;
+  padding: 6px;
+  margin: 0 10px;
+}
+
+article {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 90%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+article .container {
+  padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */

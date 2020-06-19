@@ -25,7 +25,10 @@ function ready() {
   }
 
   document.querySelector('#purchaseBtn').addEventListener('click', purchaseClicked);
+
+
 }
+
 
 function purchaseClicked() {
   alert('Dziękujemy za zakupy!!');
@@ -118,3 +121,32 @@ function updateCartTotal() {
   total = Math.round(total * 100) / 100;
   document.querySelector('.totalPrice').innerText = `${total} zł`;
 }
+
+// to top button
+const toTopButton = document.querySelector("#toTopButton");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    toTopButton.classList.add('appear')
+  } else {
+    toTopButton.classList.remove('appear')
+  }
+}
+
+toTopButton.addEventListener('click', topFunction);
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+// scale img
+const images = document.querySelectorAll('.productsContainer img');
+images.forEach(img => {
+  
+  img.addEventListener('click', () => {
+    img.classList.toggle('scale');
+  })
+});
