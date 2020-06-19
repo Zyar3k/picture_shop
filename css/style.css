@@ -298,14 +298,16 @@ a {
   text-decoration: none;
 }
 
-header {
+header#main {
   background: #ffffff;
+  background: #f3f3f3;
   box-shadow: 0 1px 2px #0a4c7e;
   width: 100%;
   position: fixed;
+  z-index: 100;
 }
 
-header nav {
+header#main nav {
   max-width: 96%;
   margin: 0 auto;
   display: -ms-flexbox;
@@ -314,7 +316,7 @@ header nav {
       justify-content: space-between;
 }
 
-header nav .logo {
+header#main nav .logo {
   padding: 10px 0;
   width: 10%;
   display: -ms-flexbox;
@@ -324,11 +326,11 @@ header nav .logo {
   text-align: center;
 }
 
-header nav .logo img {
+header#main nav .logo img {
   height: 80px;
 }
 
-header nav ul {
+header#main nav ul {
   width: 90%;
   display: -ms-flexbox;
   display: flex;
@@ -339,7 +341,7 @@ header nav ul {
   list-style: none;
 }
 
-header nav ul li a {
+header#main nav ul li a {
   padding: 10px;
   margin: 10px;
   color: #0a4c7e;
@@ -349,12 +351,13 @@ header nav ul li a {
   transition: all .2s ease-in-out;
 }
 
-header nav ul li a:hover, header nav ul li a:focus, header nav ul li a:active {
+header#main nav ul li a:hover, header#main nav ul li a:focus, header#main nav ul li a:active {
   border-bottom: 3px solid #0a4c7e;
 }
 
 footer {
-  background: #0a4c7e;
+  background: #f3f3f3;
+  background: #c0c0c0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -383,12 +386,15 @@ footer .container .pageName {
   -ms-flex-align: center;
       align-items: center;
   font-size: 22px;
-  color: #fff;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
 footer .container .pageName img {
   height: 40px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 footer .container ul {
@@ -398,9 +404,28 @@ footer .container ul {
 }
 
 footer .container ul li a {
+  color: black;
   font-size: 30px;
   padding: 6px;
   margin: 0 10px;
+}
+
+footer .container ul li a:hover i {
+  transform: scale(1.2);
+}
+
+footer .container ul li a:hover i.fa-youtube {
+  color: #c4302b;
+}
+
+footer .container ul li a:hover i.fa-instagram {
+  vertical-align: middle;
+  color: #d6249f;
+  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+footer .container ul li a:hover i.fa-facebook-square {
+  color: #3b5998;
 }
 
 article {
@@ -413,5 +438,83 @@ article {
 
 article .container {
   padding: 10px;
+}
+
+article#intro {
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+article#intro #bgdVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+article#intro .container {
+  position: absolute;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100%;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: rgba(241, 241, 241, 0.4);
+  width: 100%;
+}
+
+article#intro .container header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article#intro .container header h1 {
+  font-size: 50px;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+article#intro .container header h1 .name {
+  color: rgba(241, 241, 241, 0.6);
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+article#intro .container header .btnIntro {
+  margin: 0 auto;
+  margin-top: 80px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 200px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+article#intro .container header .btnIntro:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+article#intro .container header .btnIntro:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.8);
 }
 /*# sourceMappingURL=style.css.map */

@@ -25,8 +25,6 @@ function ready() {
   }
 
   document.querySelector('#purchaseBtn').addEventListener('click', purchaseClicked);
-
-
 }
 
 
