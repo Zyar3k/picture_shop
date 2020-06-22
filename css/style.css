@@ -358,6 +358,300 @@ article#store #toTopButton.appear {
   cursor: none;
 }
 
+article#contact .container {
+  height: calc(100vh - 150px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+article#contact .container .subpageTitle {
+  color: #0a4c7e;
+  text-align: center;
+  font-size: 40px;
+  border-bottom: 4px solid #0a4c7e;
+}
+
+article#contact .container .top, article#contact .container .bottom {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 47%;
+}
+
+article#contact .container .west, article#contact .container .east {
+  min-width: 50%;
+}
+
+article#contact .container .top {
+  margin-top: 20px;
+}
+
+article#contact .container .top .west {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article#contact .container .top .west .contactDetailsWrapper {
+  min-width: 90%;
+  color: #0a4c7e;
+}
+
+article#contact .container .top .west .contactDetailsWrapper div {
+  margin: 10px 0;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .title {
+  font-size: 34px;
+  padding: 20px 0;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .subtitle {
+  font-size: 28px;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .contactDetail, article#contact .container .top .west .contactDetailsWrapper .sm {
+  width: 40%;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .contactDetail i, article#contact .container .top .west .contactDetailsWrapper .sm i {
+  width: 16%;
+  text-align: center;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .contactDetail {
+  font-size: 22px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 26px;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a {
+  font-size: 26px;
+  color: #0a4c7e;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a:hover {
+  color: #232323;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a:hover .fa-facebook-square {
+  color: #3b5998;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a:hover .fa-instagram {
+  vertical-align: middle;
+  color: #d6249f;
+  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a:hover .fa-youtube {
+  color: #c4302b;
+}
+
+article#contact .container .top .west .contactDetailsWrapper .sm a:hover .fa-twitter {
+  color: #3b5998;
+}
+
+article#contact .container .top .east {
+  background-image: url(/images/contactBgd.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+article#contact .container .bottom {
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article#contact .container .bottom form {
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+article#contact .container .bottom form .west {
+  padding: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+article#contact .container .bottom form .west .inputRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+}
+
+article#contact .container .bottom form .west .inputRow textarea {
+  width: 100%;
+  height: 80%;
+  border: 2px solid #b8ccd9;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+article#contact .container .bottom form .west .inputRow textarea:focus {
+  outline: 0;
+  border-color: #0a4c7e;
+}
+
+article#contact .container .bottom form .west .inputRow small {
+  color: #e74c3c;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+article#contact .container .bottom form .west .inputRow.success textarea {
+  border-color: #2ecc71;
+}
+
+article#contact .container .bottom form .west .inputRow.error textarea {
+  border-color: #e74c3c;
+}
+
+article#contact .container .bottom form .west .inputRow.error small {
+  visibility: visible;
+}
+
+article#contact .container .bottom form .east {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article#contact .container .bottom form .east .left {
+  padding: 30px;
+  min-width: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+
+article#contact .container .bottom form .east .left .inputRow {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article#contact .container .bottom form .east .left .inputRow label {
+  font-size: 26px;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article#contact .container .bottom form .east .left .inputRow input {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px solid #b8ccd9;
+  border-radius: 6px;
+}
+
+article#contact .container .bottom form .east .left .inputRow input:focus {
+  outline: 0;
+  border-color: #0a4c7e;
+}
+
+article#contact .container .bottom form .east .left .inputRow i {
+  position: absolute;
+  top: 54px;
+  right: 14px;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+article#contact .container .bottom form .east .left .inputRow small {
+  color: #e74c3c;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  visibility: hidden;
+}
+
+article#contact .container .bottom form .east .left .inputRow.success input {
+  border-color: #2ecc71;
+}
+
+article#contact .container .bottom form .east .left .inputRow.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+article#contact .container .bottom form .east .left .inputRow.error input {
+  border-color: #e74c3c;
+}
+
+article#contact .container .bottom form .east .left .inputRow.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+article#contact .container .bottom form .east .left .inputRow.error small {
+  visibility: visible;
+}
+
+article#contact .container .bottom form .east .right {
+  padding: 30px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-align: center;
+      align-items: center;
+  min-width: 50%;
+}
+
+article#contact .container .bottom form .east .right button {
+  font-size: 24px;
+  width: 200px;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px;
+  background: #0a4c7e;
+  cursor: pointer;
+}
+
+article#contact .container .bottom form .east .right button:hover {
+  background: #0a257e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

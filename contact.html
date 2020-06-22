@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,34 +10,86 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 	<header id="main">
 		<nav>
 			<a class="logo" href="index.html"><img src="/images/logo2.png" alt=""></a>
 			<ul>
-				<li><a href="store.html">Sklep</a></li>
 				<li><a href="about.html">O nas</a></li>
+				<li><a href="store.html">Sklep</a></li>
 				<li><a href="contact.html">Kontakt</a></li>
 			</ul>
 		</nav>
 	</header>
 
+	<article id="contact">
+		<section class="container">
+			<h1 class="subpageTitle">ZOSTAŃMY W KONTAKCIE</h1>
+			<section class="top">
+				<div class="west">
+					<div class="contactDetailsWrapper">
+						<div class="subtitle">Dane kontaktowe:</div>
+						<div class="title">Fotografia Jan Kowalski</div>
+						<div class="contactDetail">
+							<i class="fas fa-mobile-alt"></i><p>123456798</p>
+						</div>
+						<div class="contactDetail">
+							<i class="fas fa-envelope-open-text"></i><p>j.kowalski@jkf.pl</p>
+						</div>
+						<div class="sm"><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></div>
+						<div class="sm"><a href="#"><i class="fab fa-instagram"></i>Instagram</a></div>
+						<div class="sm"><a href="#"><i class="fab fa-youtube"></i>YouTube</a></div>
+						<div class="sm"><a href="#"><i class="fab fa-twitter"></i>Twitter</a></div>
+					</div>
+				</div>
+				<div class="east"></div>
+			</section>
 
-	<article>
-		<div class="container">
-
-			<h1>
-				ondex
-			</h1>
-		</div>
+			<section class="bottom">
+				<form id="form" action="">
+					<div class="west">
+						<div class="inputRow">
+							<textarea id="textarea" cols="30" rows="10" placeholder="Twoja wiadomość..."></textarea>
+							<small>Error message</small>
+						</div>
+					</div>
+					<div class="east">
+						<div class="left">
+							<div class="inputRow">
+								<label for="username">Imię</label>
+								<input type="text" id="username" />
+								<i class="fas fa-check-circle"></i>
+								<i class="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<div class="inputRow">
+								<label for="tel">Numer telefonu</label>
+								<input type="number" id="tel" />
+								<i class="fas fa-check-circle"></i>
+								<i class="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+							<div class="inputRow">
+								<label for="email">E-mail</label>
+								<input type="text" id="email" />
+								<i class="fas fa-check-circle"></i>
+								<i class="fas fa-exclamation-circle"></i>
+								<small>Error message</small>
+							</div>
+						</div>
+						<div class="right">
+							<button type="submit">Wyślij</button>
+						</div>
+					</div>
+				</form>
+			</section>
+		</section>
 	</article>
-
 
 	<footer>
 		<div class="container">
 			<div class="pageName">
 				<img src="/images/logo4.png" alt="">
-				Picture shop
+				Jan Kowalski
 			</div>
 			<ul>
 					<li>
@@ -59,6 +111,7 @@
 	</div>
 	</footer>
 	
+	<script src="js/contact.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

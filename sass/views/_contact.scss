@@ -1,0 +1,277 @@
+article#contact {
+  .container {
+    height: calc(100vh - 150px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .subpageTitle {
+      color: $color-blue;
+      text-align: center;
+      font-size: 40px;
+      border-bottom: 4px solid $color-blue;
+    }
+
+    .top, .bottom {
+      display: flex;
+      min-height: 47%;
+    }
+
+    .west, .east {
+      min-width: 50%;
+    }
+    
+    .top {
+      margin-top: 20px;
+      
+      .west {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .contactDetailsWrapper {
+          min-width: 90%;
+          color: $color-blue;
+
+          div {
+            margin: 10px 0;
+          }
+
+          .title {
+            font-size: 34px;
+            padding: 20px 0;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 2px;
+          }
+
+          .subtitle {
+            font-size: 28px;
+          }
+
+          .contactDetail, .sm {
+            width: 40%;
+
+            i {
+              width: 16%;
+              text-align: center;
+            }
+          }
+
+          .contactDetail {
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+          }
+
+          .sm {
+            a {
+              font-size: 26px;
+              color: $color-blue;
+              display: flex;
+              font-weight: bold;
+              align-items: center;
+
+              &:hover {
+                color: rgb(35, 35, 35);
+
+                .fa-facebook-square {
+                  color: #3b5998;
+                }
+
+                .fa-instagram {
+                  vertical-align: middle;
+                  color: #d6249f;
+                  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+                }
+
+                .fa-youtube {
+                  color: #c4302b;
+                }
+
+                .fa-twitter {
+                  color: #3b5998;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .east {
+        background-image: url(/images/contactBgd.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10px;
+      }
+    }
+    
+    .bottom {
+      flex-direction: column;
+      
+      form {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+
+        .west {
+          padding: 30px;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          .inputRow {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            textarea {
+              width: 100%;
+              height: 80%;
+              border: 2px solid #b8ccd9;
+              font-size: 24px;
+              padding: 10px;
+              border-radius: 6px;
+
+              &:focus {
+                outline: 0;
+                border-color: $color-blue;
+              }
+            }
+
+            small {
+              color: #e74c3c;
+              bottom: 0;
+              left: 0;
+              font-size: 20px;
+              visibility: hidden;
+            }
+
+            &.success{
+
+              textarea {
+                border-color: #2ecc71;
+              }
+            }
+
+            &.error{
+              textarea {
+                border-color: #e74c3c;
+              }
+
+              small {
+                visibility: visible;
+              }
+            }
+          }
+        }
+
+        .east {
+          display: flex;
+
+          .left {
+            padding: 30px;
+            min-width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            .inputRow {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+
+              label {
+                font-size: 26px;
+                display: flex;
+              }
+
+              input {
+                width: 100%;
+                font-size: 20px;
+                padding: 10px;
+                border: 2px solid #b8ccd9;
+                border-radius: 6px;
+
+                &:focus {
+                  outline: 0;
+                  border-color: $color-blue;
+                }
+              }
+
+              i {
+                position: absolute;
+                top: 54px;
+                right: 14px;
+                font-size: 20px;
+                visibility: hidden;
+              }
+
+              small {
+                color: #e74c3c;
+                bottom: 0;
+                left: 0;
+                font-size: 20px;
+                visibility: hidden;
+              }
+
+              &.success{
+
+                input {
+                  border-color: #2ecc71;
+                }
+
+                i.fa-check-circle {
+                  color: #2ecc71;
+                  visibility: visible;
+                }
+              }
+
+              &.error{
+                input {
+                  border-color: #e74c3c;
+                }
+
+                i.fa-exclamation-circle {
+                  color: #e74c3c;
+                  visibility: visible;
+                }
+
+                small {
+                  visibility: visible;
+                }
+              }
+            }
+          }
+
+          .right {
+            padding: 30px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-width: 50%;
+
+            button {
+              font-size: 24px;
+              width: 200px;
+              letter-spacing: 2px;
+              border: none;
+              border-radius: 6px;
+              color: #fff;
+              padding: 10px;
+              background: $color-blue;
+              cursor: pointer;
+
+              &:hover {
+                background: $color-blue-hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
