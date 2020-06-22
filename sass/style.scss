@@ -234,94 +234,212 @@ article {
 
 
 
-// article#about {
+article#about {
+  overflow-y: hidden;
+  .container {
+    padding: 0;
+    
+    // kosz
+    .wedding {
+      background: blueviolet;
+      // background-image: url(/images/wedding1.jpg);
+    }
+    .brideGroom {
+      background: grey;
+    }
+    .children {
+      background: lightcoral;
+    }
+    .family {
+      background: lightgreen;
+    }
+    .artistic {
+      background: lightslategray;
+    }
+    .landscapes {
+      background: lightsalmon;
+    }
+    // kosz
 
-
-//   .container {
-//     padding: 0;
-
-//     .aboutIntro {
-//       background: grey;
-//       height: calc(100vh - 150px);
-//       display: flex;
-//       flex-wrap: wrap;
-
-//       .mainBox {
-//         width: 50%;
-//         min-height: 33%;
-//         background-position: center;
-//         background-size: cover;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         cursor: pointer;
-
-//         &.wedding {
-//           background: red;
-//           // background-image: url(/images/wedding1.jpg);
-//         }
-//         &.brideGroom {
-//           background: blue;
-//           // background-image: url(/images/groomBride1.jpg);
-//         }
-//         &.children {
-//           background: green;
-//           // background-image: url(/images/children1.jpg);
-//         }
-//         &.family {
-//           background: yellow;
-//           // background-image: url(/images/family1.jpg);
-//         }
-//         &.artistic {
-//           background: brown;
-//           // background-image: url(/images/artistic1.jpg);
-//         }
-//         &.landscapes {
-//           background: magenta;
-//           // background-image: url(/images/landscapes1.jpg);
-//         }
-
-//         // &:hover h1 {
-//         //   background: rgba(0, 0, 0, 0);
-//         //   text-shadow: 0 0 2px black,        //               0 0 4px black,
-//         //               0 0 8px black,
-//         //               0 0 12px black;
-//         // }
-
-
-
-//         h1 {
-//           margin: 0;
-//           padding: 0;
-//           // display: flex;
-//           // justify-content: center;
-//           // align-items: center;
-//           // text-transform: uppercase;
-//           // letter-spacing: 3px;
-//           // color: #fff;
-//           font-size: 30px;
-//           // background: rgba(0, 0, 0, 0.5);
-//           // width: 100%;
-//           // height: 100%;
-//           transition: ease 0.3s;
-//         }
-
-//         &.grow {
-//           height: calc(100vh - 150px);
-//           width: 90%;
-//           position: absolute;
-
-//           // background: blue;
-//         }
-
-//         &.hide {
-//           background: red;
-//           // display: none;
-//         }
-
+    .aboutIntro {
+      min-height: calc(100vh - 150px);
+      display: flex;
+      flex-wrap: wrap;
+      
+      .aboutBoxIntro {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         
-//       }
-//     }
-//   }
 
-// }
+        &.wedding {
+          // background: blueviolet;
+          background-image: url(/images/wedding1.jpg);
+        }
+        &.brideGroom {
+          // background: grey;
+          background-image: url(/images/groomBride1.jpg);
+        }
+        &.children {
+          // background: lightcoral;
+          background-image: url(/images/children1.jpg);
+        }
+        &.family {
+          // background: lightgreen;
+          background-image: url(/images/family1.jpg);
+        }
+        &.artistic {
+          // background: lightslategray;
+          background-image: url(/images/artistic1.jpg);
+        }
+        &.landscapes {
+          // background: lightsalmon;
+          background-image: url(/images/landscapes1.jpg);
+        }
+
+        .closeBtn {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          top: 20px;
+          right: 20px;
+          display: none;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+          cursor: pointer;
+          color: red;
+
+          img {
+            width: 100%;
+            padding: 20px;
+            opacity: 0.5;
+            transition: opacity .1s ease-in-out;
+          }
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+
+        .boxTitle {
+          font-size: 40px;
+          text-transform: uppercase;
+          font-weight: bold;
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: .4s ease;
+          cursor: pointer;
+          color: #fff;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0);
+            text-shadow: 0 0 2px black,
+            0 0 6px black,
+            0 0 10px black;
+          }
+        }
+
+        .showMoreBtn {
+          position: absolute;
+          bottom: 0;
+          color: #fff;
+          background: $color-blue;
+          padding: 10px;
+          display: none;
+          width: 260px;
+          text-align: center;
+          font-size: 26px;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          box-shadow: 0 -2px 4px black;
+
+          &:hover {
+            background: $color-blue-hover;
+            box-shadow: 0 -1px 2px black;
+          }
+        }
+
+        &.grow {  
+          position: absolute;
+          height: calc(100vh - 150px);
+          width: 90%;
+
+          .closeBtn {
+            display: block;
+          }
+  
+          .boxTitle {
+            background: rgba(0, 0, 0, 0);
+            cursor: default;
+            font-size: 80px;
+            text-shadow: 0 0 2px black,
+            0 0 6px black,
+            0 0 10px black;
+          }
+  
+          .showMoreBtn {
+            display: block;
+          }
+        }
+
+        &.hide {
+          display: none;
+        }
+      }
+
+    }
+
+
+
+
+    a {
+      color: black;
+    }
+
+
+
+    section.aboutDetails {
+      height: calc(100vh - 150px);
+      // background: rgba(0, 0, 0, 0.8);
+      display: none;
+      visibility: hidden;
+      position: relative;
+
+      .backBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #ffffff;
+        background: $color-blue;
+        font-size: 24px;
+        padding: 10px;
+        border-bottom-left-radius: 30px;
+        box-shadow: -1px 1px 4px black;
+        // height: 20px;
+
+        &:hover {
+          background: $color-blue-hover;
+          box-shadow: 1px -1px 4px black;
+        }
+      }
+
+
+      &.show {
+        display: block;
+        visibility: visible;
+      }
+
+    }
+  }
+}
