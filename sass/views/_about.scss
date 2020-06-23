@@ -1,0 +1,380 @@
+article#about {
+  overflow-y: hidden;
+  .container {
+    padding: 0;
+
+    .aboutIntro {
+      min-height: calc(100vh - 150px);
+      display: flex;
+      flex-wrap: wrap;
+      
+      .aboutBoxIntro {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &.wedding {
+          background-image: url(/images/about/wedding0.jpg);
+        }
+        &.brideGroom {
+          background-image: url(/images/about/groomBride0.jpg);
+        }
+        &.children {
+          background-image: url(/images/about/children0.jpg);
+        }
+        &.family {
+          background-image: url(/images/about/family0.jpg);
+        }
+        &.artistic {
+          background-image: url(/images/about/artistic0.jpg);
+        }
+        &.landscapes {
+          background-image: url(/images/about/landscapes0.jpg);
+        }
+
+        .closeBtn {
+          position: absolute;
+          width: 80px;
+          height: 80px;
+          top: 20px;
+          right: 20px;
+          display: none;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+          cursor: pointer;
+          color: red;
+
+          img {
+            width: 100%;
+            padding: 20px;
+            opacity: 0.5;
+            transition: opacity .1s ease-in-out;
+          }
+
+          &:hover {
+            img {
+              opacity: 1;
+            }
+          }
+        }
+
+        .boxTitle {
+          font-size: 40px;
+          text-transform: uppercase;
+          font-weight: bold;
+          background: rgba(4, 70, 120, 0.4);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all .8s ease-in-out;
+          cursor: pointer;
+          color: $color-white;
+
+          &:hover {
+            background: rgba(0, 0, 0, 0.1);
+            text-shadow: 0 0 2px black,
+            0 0 6px black,
+            0 0 10px black;
+          }
+        }
+
+        .showMoreBtn {
+          position: absolute;
+          bottom: 0;
+          color: $color-white;
+          background: $color-blue;
+          padding: 10px;
+          display: none;
+          width: 260px;
+          text-align: center;
+          font-size: 26px;
+          border-top-left-radius: 30px;
+          border-top-right-radius: 30px;
+          box-shadow: 0 -2px 4px black;
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            background: $color-blue-hover;
+            box-shadow: 0 -1px 2px black;
+          }
+        }
+
+        &.grow {  
+          position: absolute;
+          height: calc(100vh - 150px);
+          width: 90%;
+
+          .closeBtn {
+            display: block;
+          }
+  
+          .boxTitle {
+            background: rgba(0, 0, 0, 0);
+            cursor: default;
+            font-size: 80px;
+            text-shadow: 0 0 2px black,
+                        0 0 6px black,
+                        0 0 10px black;
+          }
+  
+          .showMoreBtn {
+            display: block;
+          }
+        }
+
+        &.hide {
+          display: none;
+        }
+      }
+    }
+
+    section.aboutDetails {
+      height: calc(100vh - 150px);
+      display: none;
+      visibility: hidden;
+      position: relative;
+      flex-direction: column;
+
+      &.wedding {
+        .four {
+          background: url(/images/about/wedding4.jpg);
+        }
+      }
+      &.brideGroom {
+        .four {
+          background: url(/images/about/groomBride4.jpg);
+          background-position: bottom;
+        }
+      }
+      &.children {
+        .four {
+          background: url(/images/about/children4.jpg);
+          background-position: bottom;
+        }
+      }
+      &.family {
+        .four {
+          background: url(/images/about/family2.jpg);
+        }
+      }
+
+      &.artistic {
+        .four {
+          background: url(/images/about/artistic4.jpg);
+        }
+      }
+      &.landscapes {
+        .four {
+          background: url(/images/about/landscapes4.jpg);
+        }
+      }
+
+      .backBtn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: $color-white;
+        background: $color-blue;
+        font-size: 24px;
+        padding: 10px;
+        border-bottom-left-radius: 30px;
+        box-shadow: -1px 1px 4px black;
+        z-index: 997;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+          background: $color-blue-hover;
+          box-shadow: 1px -1px 4px black;
+        }
+      }
+
+      .open {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .fa-search-plus {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 100px;
+          font-weight: bold;
+          color: $color-blue;
+          opacity: 0;
+        }
+
+        &.three {
+          align-items: flex-end;
+        }
+
+        &.six {
+          align-items: flex-end;
+        }
+
+        img {
+          width: 100%;
+          opacity: .8;
+          transition: all .3s ease-in-out;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          img {
+            opacity: 1;
+          }
+
+          .fa-search-plus {
+            opacity: 1;
+          }
+        }
+      }
+      
+      .top {
+        position: relative;
+        height: 75%;
+        display: flex;
+
+        .side {
+          width: 25%;
+          height: 100%;
+          border-left: 1px solid $color-blue;
+          
+          .open {
+            border-top: 1px solid $color-blue;
+
+            &:last-child {
+              border-bottom: 1px solid $color-blue;
+            }
+          }
+
+          .first {
+            overflow: hidden;
+            height: calc(100% / 3);
+          }
+
+          .two {
+            overflow: hidden;
+            height: calc(100% / 3);
+          }
+
+          .three {
+            height: calc(100% / 3);
+          }
+        }
+
+        .main {
+          width: 75%;
+
+          .four {
+            height: 100%;
+            width: 100%;
+            padding: 2px;
+            border: 2px solid $color-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            background-size: cover;
+
+            .content {
+              
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+
+              p {
+                background: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                margin: 20px;
+                color: $color-white;
+                padding: 30px;
+                font-size: 22px;
+                text-align: center;
+                letter-spacing: 2px;
+              }
+            }
+          }
+        }
+      }
+
+      .bottom {
+        height: 25%;
+        display: flex;
+        border-bottom: 1px solid $color-blue;
+
+        div {
+          height: 100%;
+          width: 25%;
+          border-left: 1px solid $color-blue;
+
+          &:last-child {
+            border-right: 1px solid $color-blue;
+          }
+        }
+      }
+
+      &.show {
+        display: flex;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  display: none;
+
+  .modal {
+    background: $color-blue;
+    height: 90%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid $color-blue;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+
+    .close-modal {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      height: 50px;
+      cursor: pointer;
+    }
+
+    &.open {
+      display: flex;
+    }
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &.open {
+    display: flex;
+  }
+}

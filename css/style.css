@@ -76,6 +76,408 @@ article#intro .container header .btnIntro:focus {
   background: rgba(0, 0, 0, 0.8);
 }
 
+article#about {
+  overflow-y: hidden;
+}
+
+article#about .container {
+  padding: 0;
+}
+
+article#about .container .aboutIntro {
+  min-height: calc(100vh - 150px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro {
+  width: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.wedding {
+  background-image: url(/images/about/wedding0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
+  background-image: url(/images/about/groomBride0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.children {
+  background-image: url(/images/about/children0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.family {
+  background-image: url(/images/about/family0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.artistic {
+  background-image: url(/images/about/artistic0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.landscapes {
+  background-image: url(/images/about/landscapes0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  right: 20px;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  color: red;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn img {
+  width: 100%;
+  padding: 20px;
+  opacity: 0.5;
+  transition: opacity .1s ease-in-out;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn:hover img {
+  opacity: 1;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba(4, 70, 120, 0.4);
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  transition: all .8s ease-in-out;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .boxTitle:hover {
+  background: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  background: #0a4c7e;
+  padding: 10px;
+  display: none;
+  width: 260px;
+  text-align: center;
+  font-size: 26px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -2px 4px black;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn:hover {
+  background: #0a257e;
+  box-shadow: 0 -1px 2px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow {
+  position: absolute;
+  height: calc(100vh - 150px);
+  width: 90%;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .closeBtn {
+  display: block;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
+  background: rgba(0, 0, 0, 0);
+  cursor: default;
+  font-size: 80px;
+  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .showMoreBtn {
+  display: block;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.hide {
+  display: none;
+}
+
+article#about .container section.aboutDetails {
+  height: calc(100vh - 150px);
+  display: none;
+  visibility: hidden;
+  position: relative;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article#about .container section.aboutDetails.wedding .four {
+  background: url(/images/about/wedding4.jpg);
+}
+
+article#about .container section.aboutDetails.brideGroom .four {
+  background: url(/images/about/groomBride4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.children .four {
+  background: url(/images/about/children4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.family .four {
+  background: url(/images/about/family2.jpg);
+}
+
+article#about .container section.aboutDetails.artistic .four {
+  background: url(/images/about/artistic4.jpg);
+}
+
+article#about .container section.aboutDetails.landscapes .four {
+  background: url(/images/about/landscapes4.jpg);
+}
+
+article#about .container section.aboutDetails .backBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ffffff;
+  background: #0a4c7e;
+  font-size: 24px;
+  padding: 10px;
+  border-bottom-left-radius: 30px;
+  box-shadow: -1px 1px 4px black;
+  z-index: 997;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container section.aboutDetails .backBtn:hover {
+  background: #0a257e;
+  box-shadow: 1px -1px 4px black;
+}
+
+article#about .container section.aboutDetails .open {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: hidden;
+}
+
+article#about .container section.aboutDetails .open .fa-search-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: #0a4c7e;
+  opacity: 0;
+}
+
+article#about .container section.aboutDetails .open.three {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open.six {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open img {
+  width: 100%;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container section.aboutDetails .open:hover {
+  cursor: pointer;
+}
+
+article#about .container section.aboutDetails .open:hover img {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .open:hover .fa-search-plus {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .top {
+  position: relative;
+  height: 75%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article#about .container section.aboutDetails .top .side {
+  width: 25%;
+  height: 100%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open {
+  border-top: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open:last-child {
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .first {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .two {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .three {
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .main {
+  width: 75%;
+}
+
+article#about .container section.aboutDetails .top .main .four {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  border: 2px solid #0a4c7e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+article#about .container section.aboutDetails .top .main .four .content {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .top .main .four .content p {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 20px;
+  color: #ffffff;
+  padding: 30px;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+article#about .container section.aboutDetails .bottom {
+  height: 25%;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div {
+  height: 100%;
+  width: 25%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div:last-child {
+  border-right: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails.show {
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none;
+}
+
+.overlay .modal {
+  background: #0a4c7e;
+  height: 90%;
+  position: absolute;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 4px solid #0a4c7e;
+  border-radius: 4px;
+  z-index: 1000;
+  display: none;
+}
+
+.overlay .modal .close-modal {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.overlay .modal.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay .modal img {
+  max-height: 100%;
+}
+
+.overlay.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 article#store .subpageTitle {
   color: #0a4c7e;
   text-align: center;
@@ -720,7 +1122,7 @@ a {
   position: absolute;
   top: 75%;
   transform: translateY(-75%);
-  color: #fff;
+  color: #ffffff;
   font-size: 30px;
 }
 
@@ -805,7 +1207,6 @@ header#main nav ul li a:hover, header#main nav ul li a:focus, header#main nav ul
 }
 
 footer {
-  background: #f3f3f3;
   background: #c0c0c0;
   position: fixed;
   bottom: 0;
@@ -888,410 +1289,5 @@ article {
 
 article .container {
   padding: 10px;
-}
-
-article#about {
-  overflow-y: hidden;
-}
-
-article#about .container {
-  padding: 0;
-}
-
-article#about .container .aboutIntro {
-  min-height: calc(100vh - 150px);
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro {
-  width: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.wedding {
-  background-image: url(/images/about/wedding0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
-  background-image: url(/images/about/groomBride0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.children {
-  background-image: url(/images/about/children0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.family {
-  background-image: url(/images/about/family0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.artistic {
-  background-image: url(/images/about/artistic0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.landscapes {
-  background-image: url(/images/about/landscapes0.jpg);
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  top: 20px;
-  right: 20px;
-  display: none;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  cursor: pointer;
-  color: red;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .closeBtn img {
-  width: 100%;
-  padding: 20px;
-  opacity: 0.5;
-  transition: opacity .1s ease-in-out;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .closeBtn:hover img {
-  opacity: 1;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
-  font-size: 40px;
-  text-transform: uppercase;
-  font-weight: bold;
-  background: rgba(4, 70, 120, 0.4);
-  width: 100%;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  transition: all .8s ease-in-out;
-  cursor: pointer;
-  color: #fff;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .boxTitle:hover {
-  background: rgba(0, 0, 0, 0.1);
-  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
-  position: absolute;
-  bottom: 0;
-  color: #fff;
-  background: #0a4c7e;
-  padding: 10px;
-  display: none;
-  width: 260px;
-  text-align: center;
-  font-size: 26px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  box-shadow: 0 -2px 4px black;
-  transition: all .3s ease-in-out;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn:hover {
-  background: #0a257e;
-  box-shadow: 0 -1px 2px black;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.grow {
-  position: absolute;
-  height: calc(100vh - 150px);
-  width: 90%;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.grow .closeBtn {
-  display: block;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
-  background: rgba(0, 0, 0, 0);
-  cursor: default;
-  font-size: 80px;
-  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.grow .showMoreBtn {
-  display: block;
-}
-
-article#about .container .aboutIntro .aboutBoxIntro.hide {
-  display: none;
-}
-
-article#about .container a {
-  color: black;
-}
-
-article#about .container section.aboutDetails {
-  height: calc(100vh - 150px);
-  display: none;
-  visibility: hidden;
-  position: relative;
-  -ms-flex-direction: column;
-      flex-direction: column;
-}
-
-article#about .container section.aboutDetails.wedding .four {
-  background: url(/images/about/wedding4.jpg);
-}
-
-article#about .container section.aboutDetails.brideGroom .four {
-  background: url(/images/about/groomBride4.jpg);
-  background-position: bottom;
-}
-
-article#about .container section.aboutDetails.children .four {
-  background: url(/images/about/children4.jpg);
-  background-position: bottom;
-}
-
-article#about .container section.aboutDetails.family .four {
-  background: url(/images/about/family2.jpg);
-}
-
-article#about .container section.aboutDetails.artistic .four {
-  background: url(/images/about/artistic4.jpg);
-}
-
-article#about .container section.aboutDetails.landscapes .four {
-  background: url(/images/about/landscapes4.jpg);
-}
-
-article#about .container section.aboutDetails .backBtn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  color: #ffffff;
-  background: #0a4c7e;
-  font-size: 24px;
-  padding: 10px;
-  border-bottom-left-radius: 30px;
-  box-shadow: -1px 1px 4px black;
-  z-index: 997;
-  transition: all .3s ease-in-out;
-}
-
-article#about .container section.aboutDetails .backBtn:hover {
-  background: #0a257e;
-  box-shadow: 1px -1px 4px black;
-}
-
-article#about .container section.aboutDetails .open {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  overflow: hidden;
-}
-
-article#about .container section.aboutDetails .open .fa-search-plus {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 100px;
-  font-weight: bold;
-  color: #0a4c7e;
-  opacity: 0;
-}
-
-article#about .container section.aboutDetails .open.three {
-  -ms-flex-align: end;
-      align-items: flex-end;
-}
-
-article#about .container section.aboutDetails .open.six {
-  -ms-flex-align: end;
-      align-items: flex-end;
-}
-
-article#about .container section.aboutDetails .open img {
-  width: 100%;
-  opacity: .8;
-  transition: all .3s ease-in-out;
-}
-
-article#about .container section.aboutDetails .open:hover {
-  cursor: pointer;
-}
-
-article#about .container section.aboutDetails .open:hover img {
-  opacity: 1;
-}
-
-article#about .container section.aboutDetails .open:hover .fa-search-plus {
-  opacity: 1;
-}
-
-article#about .container section.aboutDetails .top {
-  position: relative;
-  height: 75%;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-article#about .container section.aboutDetails .top .side {
-  width: 25%;
-  height: 100%;
-  border-left: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails .top .side .open {
-  border-top: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails .top .side .open:last-child {
-  border-bottom: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails .top .side .first {
-  overflow: hidden;
-  height: calc(100% / 3);
-}
-
-article#about .container section.aboutDetails .top .side .two {
-  overflow: hidden;
-  height: calc(100% / 3);
-}
-
-article#about .container section.aboutDetails .top .side .three {
-  height: calc(100% / 3);
-}
-
-article#about .container section.aboutDetails .top .main {
-  width: 75%;
-}
-
-article#about .container section.aboutDetails .top .main .four {
-  height: 100%;
-  width: 100%;
-  padding: 2px;
-  border: 2px solid #0a4c7e;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  background-position: center;
-  background-size: cover;
-}
-
-article#about .container section.aboutDetails .top .main .four .content {
-  width: 100%;
-  height: 100%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: end;
-      align-items: flex-end;
-}
-
-article#about .container section.aboutDetails .top .main .four .content p {
-  background: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  color: #fff;
-  padding: 30px;
-  font-size: 22px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-article#about .container section.aboutDetails .bottom {
-  height: 25%;
-  display: -ms-flexbox;
-  display: flex;
-  border-bottom: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails .bottom div {
-  height: 100%;
-  width: 25%;
-  border-left: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails .bottom div:last-child {
-  border-right: 1px solid #0a4c7e;
-}
-
-article#about .container section.aboutDetails.show {
-  display: -ms-flexbox;
-  display: flex;
-  visibility: visible;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  display: none;
-}
-
-.overlay .modal {
-  background: #0a4c7e;
-  height: 90%;
-  position: absolute;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  border: 4px solid #0a4c7e;
-  border-radius: 4px;
-  z-index: 1000;
-  display: none;
-}
-
-.overlay .modal .close-modal {
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  height: 50px;
-  cursor: pointer;
-}
-
-.overlay .modal.open {
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.overlay .modal img {
-  max-height: 100%;
-}
-
-.overlay.open {
-  display: -ms-flexbox;
-  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
