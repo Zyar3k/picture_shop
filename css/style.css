@@ -753,7 +753,7 @@ header#main {
   box-shadow: 0 1px 2px #0a4c7e;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 998;
 }
 
 header#main nav {
@@ -810,6 +810,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+  z-index: 998;
   left: 0;
   right: 0;
   box-shadow: 0 -1px 2px black;
@@ -897,30 +898,6 @@ article#about .container {
   padding: 0;
 }
 
-article#about .container .wedding {
-  background: blueviolet;
-}
-
-article#about .container .brideGroom {
-  background: grey;
-}
-
-article#about .container .children {
-  background: lightcoral;
-}
-
-article#about .container .family {
-  background: lightgreen;
-}
-
-article#about .container .artistic {
-  background: lightslategray;
-}
-
-article#about .container .landscapes {
-  background: lightsalmon;
-}
-
 article#about .container .aboutIntro {
   min-height: calc(100vh - 150px);
   display: -ms-flexbox;
@@ -945,7 +922,7 @@ article#about .container .aboutIntro .aboutBoxIntro {
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.wedding {
-  background-image: url(/images/wedding1.jpg);
+  background-image: url(/images/wedding0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
@@ -996,7 +973,7 @@ article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
   font-size: 40px;
   text-transform: uppercase;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(4, 70, 120, 0.4);
   width: 100%;
   height: 100%;
   display: -ms-flexbox;
@@ -1005,13 +982,13 @@ article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  transition: .4s ease;
+  transition: all .8s ease-in-out;
   cursor: pointer;
   color: #fff;
 }
 
 article#about .container .aboutIntro .aboutBoxIntro .boxTitle:hover {
-  background: rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.1);
   text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
 }
 
@@ -1028,6 +1005,7 @@ article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   box-shadow: 0 -2px 4px black;
+  transition: all .3s ease-in-out;
 }
 
 article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn:hover {
@@ -1049,7 +1027,7 @@ article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
   background: rgba(0, 0, 0, 0);
   cursor: default;
   font-size: 80px;
-  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
+  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.grow .showMoreBtn {
@@ -1069,6 +1047,8 @@ article#about .container section.aboutDetails {
   display: none;
   visibility: hidden;
   position: relative;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 article#about .container section.aboutDetails .backBtn {
@@ -1081,6 +1061,8 @@ article#about .container section.aboutDetails .backBtn {
   padding: 10px;
   border-bottom-left-radius: 30px;
   box-shadow: -1px 1px 4px black;
+  z-index: 997;
+  transition: all .3s ease-in-out;
 }
 
 article#about .container section.aboutDetails .backBtn:hover {
@@ -1088,8 +1070,202 @@ article#about .container section.aboutDetails .backBtn:hover {
   box-shadow: 1px -1px 4px black;
 }
 
+article#about .container section.aboutDetails .open {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: hidden;
+}
+
+article#about .container section.aboutDetails .open .fa-search-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: #0a4c7e;
+  opacity: 0;
+}
+
+article#about .container section.aboutDetails .open.three {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open.six {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open img {
+  width: 100%;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container section.aboutDetails .open:hover {
+  cursor: pointer;
+}
+
+article#about .container section.aboutDetails .open:hover img {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .open:hover .fa-search-plus {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .top {
+  position: relative;
+  height: 75%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article#about .container section.aboutDetails .top .side {
+  width: 25%;
+  height: 100%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open {
+  border-top: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open:last-child {
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .first {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .two {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .three {
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .main {
+  width: 75%;
+}
+
+article#about .container section.aboutDetails .top .main .four {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  border: 2px solid #0a4c7e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background: url(/images/wedding4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+article#about .container section.aboutDetails .top .main .four .content {
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .top .main .four .content p {
+  width: 90%;
+  padding: 30px;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+article#about .container section.aboutDetails .bottom {
+  height: 25%;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div {
+  height: 100%;
+  width: 25%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div:last-child {
+  border-right: 1px solid #0a4c7e;
+}
+
 article#about .container section.aboutDetails.show {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
   visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none;
+}
+
+.overlay .modal {
+  background: red;
+  height: 90%;
+  position: absolute;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 4px solid #0a4c7e;
+  border-radius: 4px;
+  z-index: 1000;
+  display: none;
+}
+
+.overlay .modal .close-modal {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.overlay .modal.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay .modal img {
+  max-height: 100%;
+}
+
+.overlay.open {
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

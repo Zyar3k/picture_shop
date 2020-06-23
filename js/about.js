@@ -40,41 +40,30 @@ showMoreBtns.forEach(showMoreBtn => {
   })
 });
 
-// const boxes = document.querySelectorAll('.aboutBoxIntro');
 
-// // console.log(boxes)
+// modals
 
-// boxes.forEach(box => {
-//   console.log(box)
-  
-//   box.addEventListener('click', () => {
+const overlay = document.querySelector('.overlay');
+const imagesGallery = document.querySelectorAll('.open');
 
-//     // box = event.target;
-//     box.classList.add('grow');
-//     console.log(box)
+imagesGallery.forEach(image => {
 
-//     const closeBtn = box.querySelector('.closeBtn');
-//     console.log(closeBtn)
+  image.addEventListener('click', () => {
+    const src = image.querySelector('img').src; //src from category
 
-//     closeBtn.addEventListener('click', () => {
-//       // console.log('dupa')
-//       const tst = box;
-//       console.log(tst)
-//       tst.classList.remove('grow');
-//     })
-  
-//   })
-  
-  
-// });
-// closeBtn.addEventListener('click', () => {
-//   // box.classList.remove('grow');
-// })
+    const modal = document.createElement('div');
+    modal.classList.add('modal', 'open')
+    const modalContent = `<img src="${src}" alt="">
+    <img src="/images/closeBtn.png" class="close-modal" />`;
+    modal.innerHTML = modalContent;
+    overlay.append(modal);
+    overlay.classList.add('open')
 
+    const closeModal = document.querySelector('.close-modal');
 
-// showMoreBtns.forEach(button => {
-  
-  // showMoreBtn.addEventListener('click', () => {
-  //   // button = event.target;
-  // })
-// });
+    closeModal.addEventListener('click', () => {
+      closeModal.parentElement.remove()
+      overlay.classList.remove('open')
+    });
+  })
+});

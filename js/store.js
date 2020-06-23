@@ -68,10 +68,10 @@ function addItemToCart(title, imgSrc, price) {
   const cartProducts = document.createElement('div');
   cartProducts.classList.add('cartProductRow');
   const cartProductRow = document.querySelector('.cartProductsContainer');
+
+
   const cartProductNames = cartProductRow.querySelectorAll('.cartRowName p');
-
   for (let i = 0; i < cartProductNames.length; i++) {
-
     if (cartProductNames[i].innerText == title) {
       alert('Ten produkt znajduje się już w koszyku');
       return
