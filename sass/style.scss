@@ -255,22 +255,22 @@ article#about {
         background-repeat: no-repeat;
 
         &.wedding {
-          background-image: url(/images/wedding0.jpg);
+          background-image: url(/images/about/wedding0.jpg);
         }
         &.brideGroom {
-          background-image: url(/images/groomBride1.jpg);
+          background-image: url(/images/about/groomBride0.jpg);
         }
         &.children {
-          background-image: url(/images/children1.jpg);
+          background-image: url(/images/about/children0.jpg);
         }
         &.family {
-          background-image: url(/images/family1.jpg);
+          background-image: url(/images/about/family0.jpg);
         }
         &.artistic {
-          background-image: url(/images/artistic1.jpg);
+          background-image: url(/images/about/artistic0.jpg);
         }
         &.landscapes {
-          background-image: url(/images/landscapes1.jpg);
+          background-image: url(/images/about/landscapes0.jpg);
         }
 
         .closeBtn {
@@ -384,6 +384,43 @@ article#about {
       position: relative;
       flex-direction: column;
 
+      &.wedding {
+        .four {
+          background: url(/images/about/wedding4.jpg);
+        }
+      }
+      &.brideGroom {
+        .four {
+          background: url(/images/about/groomBride4.jpg);
+          background-position: bottom;
+        }
+      }
+      &.children {
+        .four {
+          background: url(/images/about/children4.jpg);
+          background-position: bottom;
+        }
+      }
+      &.family {
+        .four {
+          background: url(/images/about/family2.jpg);
+          // background-position: bottom;
+        }
+      }
+
+      &.artistic {
+        .four {
+          background: url(/images/about/artistic4.jpg);
+          // background-position: bottom;
+        }
+      }
+      &.landscapes {
+        .four {
+          background: url(/images/about/landscapes4.jpg);
+          // background-position: bottom;
+        }
+      }
+
       .backBtn {
         position: absolute;
         right: 0;
@@ -492,12 +529,12 @@ article#about {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: url(/images/wedding4.jpg);
+            
             background-position: center;
             background-size: cover;
 
             .content {
-              background: rgba(0, 0, 0, 0.0);
+              
               width: 100%;
               height: 100%;
               display: flex;
@@ -505,7 +542,9 @@ article#about {
               align-items: flex-end;
 
               p {
-                width: 90%;
+                background: rgba(0, 0, 0, 0.5);
+                width: 100%;
+                color: #fff;
                 padding: 30px;
                 font-size: 22px;
                 text-align: center;
@@ -553,7 +592,7 @@ article#about {
   display: none;
 
   .modal {
-    background: red;
+    background: $color-blue;
     height: 90%;
     position: absolute;
     justify-content: center;

@@ -922,27 +922,27 @@ article#about .container .aboutIntro .aboutBoxIntro {
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.wedding {
-  background-image: url(/images/wedding0.jpg);
+  background-image: url(/images/about/wedding0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
-  background-image: url(/images/groomBride1.jpg);
+  background-image: url(/images/about/groomBride0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.children {
-  background-image: url(/images/children1.jpg);
+  background-image: url(/images/about/children0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.family {
-  background-image: url(/images/family1.jpg);
+  background-image: url(/images/about/family0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.artistic {
-  background-image: url(/images/artistic1.jpg);
+  background-image: url(/images/about/artistic0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro.landscapes {
-  background-image: url(/images/landscapes1.jpg);
+  background-image: url(/images/about/landscapes0.jpg);
 }
 
 article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
@@ -1049,6 +1049,32 @@ article#about .container section.aboutDetails {
   position: relative;
   -ms-flex-direction: column;
       flex-direction: column;
+}
+
+article#about .container section.aboutDetails.wedding .four {
+  background: url(/images/about/wedding4.jpg);
+}
+
+article#about .container section.aboutDetails.brideGroom .four {
+  background: url(/images/about/groomBride4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.children .four {
+  background: url(/images/about/children4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.family .four {
+  background: url(/images/about/family2.jpg);
+}
+
+article#about .container section.aboutDetails.artistic .four {
+  background: url(/images/about/artistic4.jpg);
+}
+
+article#about .container section.aboutDetails.landscapes .four {
+  background: url(/images/about/landscapes4.jpg);
 }
 
 article#about .container section.aboutDetails .backBtn {
@@ -1170,13 +1196,11 @@ article#about .container section.aboutDetails .top .main .four {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  background: url(/images/wedding4.jpg);
   background-position: center;
   background-size: cover;
 }
 
 article#about .container section.aboutDetails .top .main .four .content {
-  background: rgba(0, 0, 0, 0);
   width: 100%;
   height: 100%;
   display: -ms-flexbox;
@@ -1188,7 +1212,9 @@ article#about .container section.aboutDetails .top .main .four .content {
 }
 
 article#about .container section.aboutDetails .top .main .four .content p {
-  width: 90%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  color: #fff;
   padding: 30px;
   font-size: 22px;
   text-align: center;
@@ -1234,7 +1260,7 @@ article#about .container section.aboutDetails.show {
 }
 
 .overlay .modal {
-  background: red;
+  background: #0a4c7e;
   height: 90%;
   position: absolute;
   -ms-flex-pack: center;
