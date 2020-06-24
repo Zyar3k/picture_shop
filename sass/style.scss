@@ -153,24 +153,30 @@ header#main {
 
   .hamburger {
     position: fixed;
-    top: 16px;
-    right: 16px;
+    top: 0;
+    right: 0;
     width: 50px;
     height: 50px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     display: none;
+    box-shadow: 0 1px 2px $color-blue;
+
+    .pageName {
+      color: $color-blue;
+      position: absolute;
+      font-size: 30px;
+      font-weight: bold;
+      left: 20px;
+    }
     
     i {
       position: absolute;
       color: $color-blue;
-      font-size: 50px;
+      font-size: 40px;
+      padding: 10px;
       opacity: 0;
       transition: all .1s ease-in-out;
-
-      &.fa-times {
-        color: $color-white;
-      }
 
       &.act {
         opacity: 1;
@@ -281,6 +287,8 @@ article {
     box-shadow: none;
 
     .hamburger {
+      background: $color-white;
+      width: 100%;
       
       display: flex;
     }
@@ -355,4 +363,19 @@ article {
       }
     }
   }
+
+  article {
+    padding-top: 70px;
+    padding-bottom: 42px;
+    width: 100%;
+    min-height: 100vh;
+  
+    // display: none;
+  
+    .container {
+      padding: 10px;
+  
+    }
+  }
+  
 }

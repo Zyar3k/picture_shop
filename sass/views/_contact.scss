@@ -1,6 +1,6 @@
 article#contact {
   .container {
-    height: calc(100vh - 150px);
+    min-height: calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -274,4 +274,147 @@ article#contact {
       }
     }
   }
+}
+
+
+@media (max-width: 767px) {
+
+  article#contact {
+    .container {
+      min-height: 100vh;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+  
+      .subpageTitle {
+        font-size: 20px;
+      }
+  
+      .top, .bottom {
+        display: flex;
+        min-height: auto;
+      }
+  
+      .west, .east {
+        min-width: 100%;
+      }
+      
+      .top {
+        margin-top: 0;
+        
+        .west {
+  
+          .contactDetailsWrapper {
+            min-width: 100%;
+  
+            div {
+              margin: 4px 0;
+            }
+  
+            .title {
+              font-size: 30px;
+              padding: 8px 0;
+              letter-spacing: 0;
+            }
+  
+            .subtitle {
+              font-size: 20px;
+            }
+  
+            .contactDetail, .sm {
+              width: 90%;
+
+              i {
+                width: 20%;
+              }
+            }
+  
+            .contactDetail {
+              font-size: 22px;
+            }
+  
+            .sm {
+              a {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+        
+        .east {
+          display: none;
+        }
+      }
+      
+      .bottom {
+
+        flex-direction: column;
+        
+        form {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          justify-content: center;
+  
+          .west {
+
+
+            padding: 10px 0;
+            justify-content: center;
+  
+            .inputRow {
+              width: 100%;
+  
+              textarea {
+                height: 100%;
+                font-size: 20px;
+                padding: 10px;
+              }
+  
+              small {
+                font-size: 16px;
+                visibility: hidden;
+              }
+            }
+          }
+  
+          .east {
+            flex-direction: column;
+  
+            .left {
+              padding: 10px 0;
+              align-items: center;
+  
+              .inputRow {
+  
+                label {
+                  font-size: 20px;
+                  display: flex;
+                }
+  
+                i {
+                  top: 46px;
+                  right: 10px;
+                }
+  
+                small {
+                  font-size: 16px;
+                }
+  
+  
+              }
+            }
+  
+            .right {
+              justify-content: center;
+
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }

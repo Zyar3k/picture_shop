@@ -777,7 +777,7 @@ article#store #toTopButton.appear {
 }
 
 article#contact .container {
-  height: calc(100vh - 150px);
+  min-height: calc(100vh - 150px);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1070,6 +1070,116 @@ article#contact .container .bottom form .east .right button:hover {
   background: #0a257e;
 }
 
+@media (max-width: 767px) {
+  article#contact .container {
+    min-height: 100vh;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+  article#contact .container .subpageTitle {
+    font-size: 20px;
+  }
+  article#contact .container .top, article#contact .container .bottom {
+    display: -ms-flexbox;
+    display: flex;
+    min-height: auto;
+  }
+  article#contact .container .west, article#contact .container .east {
+    min-width: 100%;
+  }
+  article#contact .container .top {
+    margin-top: 0;
+  }
+  article#contact .container .top .west .contactDetailsWrapper {
+    min-width: 100%;
+  }
+  article#contact .container .top .west .contactDetailsWrapper div {
+    margin: 4px 0;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .title {
+    font-size: 30px;
+    padding: 8px 0;
+    letter-spacing: 0;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .subtitle {
+    font-size: 20px;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .contactDetail, article#contact .container .top .west .contactDetailsWrapper .sm {
+    width: 90%;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .contactDetail i, article#contact .container .top .west .contactDetailsWrapper .sm i {
+    width: 20%;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .contactDetail {
+    font-size: 22px;
+  }
+  article#contact .container .top .west .contactDetailsWrapper .sm a {
+    font-size: 22px;
+  }
+  article#contact .container .top .east {
+    display: none;
+  }
+  article#contact .container .bottom {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article#contact .container .bottom form {
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  article#contact .container .bottom form .west {
+    padding: 10px 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  article#contact .container .bottom form .west .inputRow {
+    width: 100%;
+  }
+  article#contact .container .bottom form .west .inputRow textarea {
+    height: 100%;
+    font-size: 20px;
+    padding: 10px;
+  }
+  article#contact .container .bottom form .west .inputRow small {
+    font-size: 16px;
+    visibility: hidden;
+  }
+  article#contact .container .bottom form .east {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article#contact .container .bottom form .east .left {
+    padding: 10px 0;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  article#contact .container .bottom form .east .left .inputRow label {
+    font-size: 20px;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  article#contact .container .bottom form .east .left .inputRow i {
+    top: 46px;
+    right: 10px;
+  }
+  article#contact .container .bottom form .east .left .inputRow small {
+    font-size: 16px;
+  }
+  article#contact .container .bottom form .east .right {
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -1216,27 +1326,33 @@ header#main nav ul li a:hover, header#main nav ul li a:focus, header#main nav ul
 
 header#main .hamburger {
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: 0;
+  right: 0;
   width: 50px;
   height: 50px;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   -ms-flex-align: center;
       align-items: center;
   display: none;
+  box-shadow: 0 1px 2px #0a4c7e;
+}
+
+header#main .hamburger .pageName {
+  color: #0a4c7e;
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold;
+  left: 20px;
 }
 
 header#main .hamburger i {
   position: absolute;
   color: #0a4c7e;
-  font-size: 50px;
+  font-size: 40px;
+  padding: 10px;
   opacity: 0;
   transition: all .1s ease-in-out;
-}
-
-header#main .hamburger i.fa-times {
-  color: #ffffff;
 }
 
 header#main .hamburger i.act {
@@ -1345,6 +1461,8 @@ article .container {
     box-shadow: none;
   }
   header#main .hamburger {
+    background: #ffffff;
+    width: 100%;
     display: -ms-flexbox;
     display: flex;
   }
@@ -1407,6 +1525,15 @@ article .container {
   footer .container ul li a.mobile {
     display: -ms-flexbox;
     display: flex;
+  }
+  article {
+    padding-top: 70px;
+    padding-bottom: 42px;
+    width: 100%;
+    min-height: 100vh;
+  }
+  article .container {
+    padding: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
