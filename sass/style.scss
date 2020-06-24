@@ -38,8 +38,6 @@ a {
   align-items: center;
   transition: all 0.5s ease;
 
-  display: none;
-
   .airplane {
     height: 200px;
     animation: airplane 1s ease infinite alternate;
@@ -266,7 +264,7 @@ article {
   margin: 0 auto;
   min-height: 100vh;
 
-  display: none;
+  // display: none;
 
   .container {
     padding: 10px;

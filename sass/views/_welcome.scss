@@ -66,3 +66,31 @@ article#intro {
     }
   }
 }
+
+@media (max-width: 767px) {
+
+  article#intro {
+  
+    #bgdVideo {
+      z-index: 1001;
+    }
+  
+    .container {
+  
+      header {
+        h1 {
+          font-size: 30px;
+          z-index: 1001;
+  
+          .name {
+            font-size: 50px;
+          }
+        }
+  
+        .btnIntro {
+          z-index: 1001;
+        }
+      }
+    }
+  }
+}
