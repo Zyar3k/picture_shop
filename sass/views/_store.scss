@@ -257,3 +257,77 @@ article#store {
     }
   }
 }
+
+
+@media (max-width: 767px) {
+  article#store {
+    .subpageTitle {
+      font-size: 20px;
+    }
+
+    .productsContainer {
+      .productBox {
+        width: 98%;
+
+        .productTitle, .productPrice {
+          font-size: 20px;
+        }
+
+        .imgWrapper {
+          img {
+            &:hover {
+              cursor: default;
+            }
+
+            &.scale {
+              transform: none;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+
+    .cart {
+      font-size: 20px;
+
+      h1 {
+          font-size: 24px;
+      }
+
+      .cartRowHeader {
+        font-size: 20px;
+      }
+
+      .cartRowHeader, .cartProductRow {
+        .cartRowName {
+          flex-direction: column;
+        }
+      }
+
+      .cartProductRow {
+        .cartRowQuantity {
+
+          input {
+            height: 40px;
+            width: 40px;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .totalPriceSection {
+        font-size: 20px;
+        width: 100%;
+
+        .totalPrice {
+          font-size: 20px;
+        }
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+}

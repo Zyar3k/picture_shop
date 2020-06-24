@@ -776,6 +776,53 @@ article#store #toTopButton.appear {
   cursor: none;
 }
 
+@media (max-width: 767px) {
+  article#store .subpageTitle {
+    font-size: 20px;
+  }
+  article#store .productsContainer .productBox {
+    width: 98%;
+  }
+  article#store .productsContainer .productBox .productTitle, article#store .productsContainer .productBox .productPrice {
+    font-size: 20px;
+  }
+  article#store .productsContainer .productBox .imgWrapper img:hover {
+    cursor: default;
+  }
+  article#store .productsContainer .productBox .imgWrapper img.scale {
+    transform: none;
+    cursor: default;
+  }
+  article#store .cart {
+    font-size: 20px;
+  }
+  article#store .cart h1 {
+    font-size: 24px;
+  }
+  article#store .cart .cartRowHeader {
+    font-size: 20px;
+  }
+  article#store .cart .cartRowHeader .cartRowName, article#store .cart .cartProductRow .cartRowName {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article#store .cart .cartProductRow .cartRowQuantity input {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+  }
+  article#store .cart .totalPriceSection {
+    font-size: 20px;
+    width: 100%;
+  }
+  article#store .cart .totalPriceSection .totalPrice {
+    font-size: 20px;
+  }
+  article#store .cart img {
+    width: 100px;
+  }
+}
+
 article#contact .container {
   min-height: calc(100vh - 150px);
   display: -ms-flexbox;
