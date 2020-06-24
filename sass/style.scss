@@ -37,41 +37,62 @@ a {
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease;
-}
-.cloud1, .cloud2, .cloud3 {
-  height: 100px;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
 
-.cloud1 {
-  top: 25%;
-  transform: translate(100%, -25%);
-  animation: clouds 3s ease infinite;
-}
-.cloud2 {
-  top: 50%;
-  transform: translate(100%, -50%);
-  animation: clouds 3s ease infinite 2s;
-}
-.cloud3 {
-  top: 75%;
-  transform: translate(100%, -75%);
-  animation: clouds 3s ease infinite 1.5s;
-}
+  display: none;
 
-.airplane {
-  height: 200px;
-  animation: airplane 1s ease infinite alternate;
-}
+  .airplane {
+    height: 200px;
+    animation: airplane 1s ease infinite alternate;
+  }
 
-.preload h3 {
-  position: absolute;
-  top: 75%;
-  transform: translateY(-75%);
-  color: $color-white;
-  font-size: 30px;
+  // h3 {
+  //   position: absolute;
+  //   top: 75%;
+  //   transform: translateY(-75%);
+  //   color: $color-white;
+  //   font-size: 30px;
+  // }
+  
+  .cloud1, .cloud2, .cloud3 {
+    height: 100px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  
+  .cloud1 {
+    top: 25%;
+    transform: translate(100%, -25%);
+    animation: clouds 3s ease infinite;
+  }
+  .cloud2 {
+    top: 50%;
+    transform: translate(100%, -50%);
+    animation: clouds 3s ease infinite 2s;
+  }
+  .cloud3 {
+    top: 75%;
+    transform: translate(100%, -75%);
+    animation: clouds 3s ease infinite 1.5s;
+  }
+  
+  @keyframes airplane  {
+    from{
+      transform: translateY(0);
+    }
+    to{
+      transform: translateY(50px);
+    }
+  }
+  
+  @keyframes clouds {
+    from {
+      right: 0%;
+    }
+    to {
+      right: 130%;
+    }
+  }
 }
 
 .preload-finish {
@@ -79,24 +100,6 @@ a {
   pointer-events: none;
 }
 
-@keyframes airplane  {
-  from{
-    transform: translateY(0);
-  }
-  to{
-    transform: translateY(50px);
-
-  }
-}
-
-@keyframes clouds {
-  from {
-    right: 0%;
-  }
-  to {
-    right: 130%;
-  }
-}
 
 header#main {
   background: $color-white;
@@ -149,6 +152,33 @@ header#main {
       }
     }
   }
+
+  .hamburger {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    
+    i {
+      position: absolute;
+      color: $color-blue;
+      font-size: 50px;
+      opacity: 0;
+      transition: all .1s ease-in-out;
+
+      &.fa-times {
+        color: $color-white;
+      }
+
+      &.act {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 footer {
@@ -171,17 +201,19 @@ footer {
 
     .pageName {
       display: flex;
-      justify-content: center;
       align-items: center;
-      font-size: 22px;
-      color: black;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-weight: bold;
 
       img {
         height: 40px;
         margin-right: 20px;
+      }
+
+      p {
+        font-size: 22px;
+        color: black;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: bold;
       }
     }
 
@@ -213,6 +245,14 @@ footer {
               color: #3b5998;
             }
           }
+
+          &.mobile {
+            display: none;
+
+            &:hover i {
+              color: $color-blue;
+            }
+          }
         }
       }
     }
@@ -226,7 +266,95 @@ article {
   margin: 0 auto;
   min-height: 100vh;
 
+  display: none;
+
   .container {
     padding: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  * {
+    scroll-padding-top: 0;
+  }
+
+  header#main {
+    box-shadow: none;
+
+    .hamburger {
+      
+      display: flex;
+    }
+  
+    nav {
+      max-width: 100%;
+  
+      .logo {
+        display: none;
+      }
+  
+      ul {
+        position: fixed;
+        min-height: calc(100vh - 42px);
+        flex-direction: column;
+        background: $color-blue;
+        left: -100%;
+        width: 100%;
+        position: fixed;
+        justify-content: flex-end;
+        transition: transform .3s;
+  
+        li {
+          border-top: 1px solid $color-white;
+          height: 120px;
+          text-align: right;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0;
+            height: 100%;
+            color: $color-white;
+            width: 100%;
+            font-size: 40px;
+          }
+        }
+
+        &.active {
+          transform: translateX(100%);
+        }
+      }
+    }
+  }
+
+  footer {
+    .container {
+      max-width: 100%;
+
+      .pageName {
+        p {
+          display: none;
+        }
+      }
+  
+      ul {
+        li {
+          a {
+            &.desktop {
+              display: none;
+            }
+            &.mobile {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
   }
 }

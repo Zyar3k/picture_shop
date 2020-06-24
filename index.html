@@ -13,7 +13,7 @@
 
 	<div class="preload">
 		<img class="airplane" src="/images/airplane.png" alt="airplane">
-		<h3>Przygotuj się do lądowania na stronie...</h3>
+		<!-- <h3>Przygotuj się do lądowania na stronie...</h3> -->
 		<img class="cloud1" src="/images/cloud.png" alt="cloud1">
 		<img class="cloud2" src="/images/cloud.png" alt="cloud2">
 		<img class="cloud3" src="/images/cloud.png" alt="cloud3">
@@ -29,6 +29,10 @@
 				<li><a href="contact.html">Kontakt</a></li>
 			</ul>
 		</nav>
+		<div class="hamburger">
+			<i class="fas fa-times"></i>
+			<i class="fas fa-bars act"></i>
+		</div>
 	</header>
 
 
@@ -49,26 +53,35 @@
 		<div class="container">
 			<div class="pageName">
 				<img src="/images/logo4.png" alt="">
-				Jan Kowalski
+				<p>Jan Kowalski</p> 
 			</div>
 			<ul>
 					<li>
-							<a href="https://www.youtube.com" target="_blank">
+							<a class="desktop" href="https://www.youtube.com" target="_blank">
 									<i class="fab fa-youtube"></i>
 							</a>
-					</li>
-					<li>
-							<a href="https://www.instagram.com" target="_blank">
-								<i class="fab fa-instagram"></i>
+							<a class="mobile" href="about.html">
+								<i class="far fa-address-card"></i>
 							</a>
 					</li>
 					<li>
-							<a href="https://www.facebook.com" target="_blank">
+							<a class="desktop" href="https://www.instagram.com" target="_blank">
+								<i class="fab fa-instagram"></i>
+							</a>
+							<a class="mobile" href="store.html">
+								<i class="fas fa-shopping-basket"></i>
+							</a>
+					</li>
+					<li>
+							<a class="desktop" href="https://www.facebook.com" target="_blank">
 								<i class="fab fa-facebook-square"></i>
+							</a>
+							<a class="mobile" href="contact.html">
+								<i class="fas fa-envelope-open-text"></i>
 							</a>
 					</li>
 			</ul>
-	</div>
+		</div>
 	</footer>
 	
 	<script src="js/index.js"></script>

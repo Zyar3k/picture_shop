@@ -1086,49 +1086,37 @@ a {
   -ms-flex-align: center;
       align-items: center;
   transition: all 0.5s ease;
+  display: none;
 }
 
-.cloud1, .cloud2, .cloud3 {
+.preload .airplane {
+  height: 200px;
+  animation: airplane 1s ease infinite alternate;
+}
+
+.preload .cloud1, .preload .cloud2, .preload .cloud3 {
   height: 100px;
   position: absolute;
   right: 0;
   z-index: -1;
 }
 
-.cloud1 {
+.preload .cloud1 {
   top: 25%;
   transform: translate(100%, -25%);
   animation: clouds 3s ease infinite;
 }
 
-.cloud2 {
+.preload .cloud2 {
   top: 50%;
   transform: translate(100%, -50%);
   animation: clouds 3s ease infinite 2s;
 }
 
-.cloud3 {
+.preload .cloud3 {
   top: 75%;
   transform: translate(100%, -75%);
   animation: clouds 3s ease infinite 1.5s;
-}
-
-.airplane {
-  height: 200px;
-  animation: airplane 1s ease infinite alternate;
-}
-
-.preload h3 {
-  position: absolute;
-  top: 75%;
-  transform: translateY(-75%);
-  color: #ffffff;
-  font-size: 30px;
-}
-
-.preload-finish {
-  opacity: 0;
-  pointer-events: none;
 }
 
 @keyframes airplane {
@@ -1147,6 +1135,11 @@ a {
   to {
     right: 130%;
   }
+}
+
+.preload-finish {
+  opacity: 0;
+  pointer-events: none;
 }
 
 header#main {
@@ -1206,6 +1199,35 @@ header#main nav ul li a:hover, header#main nav ul li a:focus, header#main nav ul
   border-bottom: 3px solid #0a4c7e;
 }
 
+header#main .hamburger {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 50px;
+  height: 50px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none;
+}
+
+header#main .hamburger i {
+  position: absolute;
+  color: #0a4c7e;
+  font-size: 50px;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+}
+
+header#main .hamburger i.fa-times {
+  color: #ffffff;
+}
+
+header#main .hamburger i.act {
+  opacity: 1;
+}
+
 footer {
   background: #c0c0c0;
   position: fixed;
@@ -1232,20 +1254,21 @@ footer .container {
 footer .container .pageName {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  font-size: 22px;
-  color: black;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-weight: bold;
 }
 
 footer .container .pageName img {
   height: 40px;
   margin-right: 20px;
+}
+
+footer .container .pageName p {
+  font-size: 22px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
 footer .container ul {
@@ -1279,15 +1302,97 @@ footer .container ul li a:hover i.fa-facebook-square {
   color: #3b5998;
 }
 
+footer .container ul li a.mobile {
+  display: none;
+}
+
+footer .container ul li a.mobile:hover i {
+  color: #0a4c7e;
+}
+
 article {
   padding-top: 100px;
   padding-bottom: 50px;
   width: 90%;
   margin: 0 auto;
   min-height: 100vh;
+  display: none;
 }
 
 article .container {
   padding: 10px;
+}
+
+@media (max-width: 767px) {
+  * {
+    scroll-padding-top: 0;
+  }
+  header#main {
+    box-shadow: none;
+  }
+  header#main .hamburger {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header#main nav {
+    max-width: 100%;
+  }
+  header#main nav .logo {
+    display: none;
+  }
+  header#main nav ul {
+    position: fixed;
+    min-height: calc(100vh - 42px);
+    -ms-flex-direction: column;
+        flex-direction: column;
+    background: #0a4c7e;
+    left: -100%;
+    width: 100%;
+    position: fixed;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    transition: transform .3s;
+  }
+  header#main nav ul li {
+    border-top: 1px solid #ffffff;
+    height: 120px;
+    text-align: right;
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  header#main nav ul li a {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+    margin: 0;
+    height: 100%;
+    color: #ffffff;
+    width: 100%;
+    font-size: 40px;
+  }
+  header#main nav ul.active {
+    transform: translateX(100%);
+  }
+  footer .container {
+    max-width: 100%;
+  }
+  footer .container .pageName p {
+    display: none;
+  }
+  footer .container ul li a.desktop {
+    display: none;
+  }
+  footer .container ul li a.mobile {
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=style.css.map */
