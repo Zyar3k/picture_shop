@@ -280,6 +280,8 @@ article#contact {
 @media (max-width: 767px) {
 
   article#contact {
+    padding-top: 0;
+    margin-top: 50px;
     .container {
       min-height: 100vh;
       

@@ -243,6 +243,7 @@ article#about .container .aboutIntro .aboutBoxIntro.hide {
 article#about .container section.aboutDetails {
   height: calc(100vh - 150px);
   display: none;
+  visibility: hidden;
   position: relative;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -439,6 +440,7 @@ article#about .container section.aboutDetails .bottom div:last-child {
 article#about .container section.aboutDetails.show {
   display: -ms-flexbox;
   display: flex;
+  visibility: visible;
 }
 
 .overlay {
@@ -916,6 +918,10 @@ article#store #toTopButton.appear {
 }
 
 @media (max-width: 767px) {
+  article#store {
+    padding-top: 0;
+    margin-top: 50px;
+  }
   article#store .subpageTitle {
     font-size: 20px;
   }
@@ -1257,6 +1263,10 @@ article#contact .container .bottom form .east .right button:hover {
 }
 
 @media (max-width: 767px) {
+  article#contact {
+    padding-top: 0;
+    margin-top: 50px;
+  }
   article#contact .container {
     min-height: 100vh;
     display: -ms-flexbox;

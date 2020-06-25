@@ -17,7 +17,8 @@ const showMoreBtns = document.querySelectorAll('.showMoreBtn');
 showMoreBtns.forEach(showMoreBtn => {
   
   showMoreBtn.addEventListener('click', () => {
-    const id = (showMoreBtn.href).slice(33);
+
+    const id = (showMoreBtn.href).split('#')[1];
 
     const aboutDetails = document.querySelectorAll('.aboutDetails');
 

@@ -261,6 +261,8 @@ article#store {
 
 @media (max-width: 767px) {
   article#store {
+    padding-top: 0;
+    margin-top: 50px;
     .subpageTitle {
       font-size: 20px;
     }
