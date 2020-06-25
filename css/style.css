@@ -92,6 +92,549 @@ article#intro .container header .btnIntro:focus {
   }
 }
 
+article#about {
+  overflow-y: hidden;
+}
+
+article#about .container {
+  padding: 0;
+}
+
+article#about .container .aboutIntro {
+  min-height: calc(100vh - 150px);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro {
+  width: 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.wedding {
+  background-image: url(/images/about/wedding0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
+  background-image: url(/images/about/groomBride0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.children {
+  background-image: url(/images/about/children0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.family {
+  background-image: url(/images/about/family0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.artistic {
+  background-image: url(/images/about/artistic0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.landscapes {
+  background-image: url(/images/about/landscapes0.jpg);
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  right: 20px;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  color: red;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn img {
+  width: 100%;
+  padding: 20px;
+  opacity: 0.5;
+  transition: opacity .1s ease-in-out;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .closeBtn:hover img {
+  opacity: 1;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba(4, 70, 120, 0.4);
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  transition: all .8s ease-in-out;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .boxTitle:hover {
+  background: rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  background: #0a4c7e;
+  padding: 10px;
+  display: none;
+  width: 260px;
+  text-align: center;
+  font-size: 26px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -2px 4px black;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn:hover {
+  background: #0a257e;
+  box-shadow: 0 -1px 2px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow {
+  position: absolute;
+  height: calc(100vh - 150px);
+  width: 90%;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .closeBtn {
+  display: block;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
+  background: rgba(0, 0, 0, 0);
+  cursor: default;
+  font-size: 80px;
+  text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.grow .showMoreBtn {
+  display: block;
+}
+
+article#about .container .aboutIntro .aboutBoxIntro.hide {
+  display: none;
+}
+
+article#about .container section.aboutDetails {
+  height: calc(100vh - 150px);
+  display: none;
+  visibility: hidden;
+  position: relative;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+article#about .container section.aboutDetails.wedding .four {
+  background: url(/images/about/wedding4.jpg);
+}
+
+article#about .container section.aboutDetails.brideGroom .four {
+  background: url(/images/about/groomBride4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.children .four {
+  background: url(/images/about/children4.jpg);
+  background-position: bottom;
+}
+
+article#about .container section.aboutDetails.family .four {
+  background: url(/images/about/family2.jpg);
+}
+
+article#about .container section.aboutDetails.artistic .four {
+  background: url(/images/about/artistic4.jpg);
+}
+
+article#about .container section.aboutDetails.landscapes .four {
+  background: url(/images/about/landscapes4.jpg);
+}
+
+article#about .container section.aboutDetails .backBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ffffff;
+  background: #0a4c7e;
+  font-size: 24px;
+  padding: 10px;
+  border-bottom-left-radius: 30px;
+  box-shadow: -1px 1px 4px black;
+  z-index: 997;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container section.aboutDetails .backBtn:hover {
+  background: #0a257e;
+  box-shadow: 1px -1px 4px black;
+}
+
+article#about .container section.aboutDetails .open {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  overflow: hidden;
+}
+
+article#about .container section.aboutDetails .open .fa-search-plus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: #0a4c7e;
+  opacity: 0;
+}
+
+article#about .container section.aboutDetails .open.three {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open.six {
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .open img {
+  width: 100%;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
+
+article#about .container section.aboutDetails .open:hover {
+  cursor: pointer;
+}
+
+article#about .container section.aboutDetails .open:hover img {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .open:hover .fa-search-plus {
+  opacity: 1;
+}
+
+article#about .container section.aboutDetails .top {
+  position: relative;
+  height: 75%;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+article#about .container section.aboutDetails .top .side {
+  width: 25%;
+  height: 100%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open {
+  border-top: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .open:last-child {
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .top .side .first {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .two {
+  overflow: hidden;
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .side .three {
+  height: calc(100% / 3);
+}
+
+article#about .container section.aboutDetails .top .main {
+  width: 75%;
+}
+
+article#about .container section.aboutDetails .top .main .four {
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  border: 2px solid #0a4c7e;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  background-position: center;
+  background-size: cover;
+}
+
+article#about .container section.aboutDetails .top .main .four .content {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+article#about .container section.aboutDetails .top .main .four .content p {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  margin: 20px;
+  color: #ffffff;
+  padding: 30px;
+  font-size: 22px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+article#about .container section.aboutDetails .bottom {
+  height: 25%;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div {
+  height: 100%;
+  width: 25%;
+  border-left: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails .bottom div:last-child {
+  border-right: 1px solid #0a4c7e;
+}
+
+article#about .container section.aboutDetails.show {
+  display: -ms-flexbox;
+  display: flex;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  display: none;
+}
+
+.overlay .modal {
+  background: #0a4c7e;
+  height: 90%;
+  position: absolute;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  border: 4px solid #0a4c7e;
+  border-radius: 4px;
+  z-index: 1000;
+  display: none;
+}
+
+.overlay .modal .close-modal {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.overlay .modal.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overlay .modal img {
+  max-height: 100%;
+}
+
+.overlay.open {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  article#about {
+    margin-top: 50px;
+    min-height: calc(100vh - 92px);
+    padding-top: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article#about .container .aboutIntro {
+    min-height: calc(100vh - 92px);
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  article#about .container .aboutIntro .aboutBoxIntro {
+    width: 100%;
+    height: calc((100vh - 92px) / 6);
+  }
+  article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
+    width: 60px;
+    height: 60px;
+    top: 70px;
+  }
+  article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
+    font-size: 20px;
+  }
+  article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
+    font-size: 18px;
+  }
+  article#about .container .aboutIntro .aboutBoxIntro.grow {
+    top: 0;
+    min-height: calc(100vh - 42px);
+    width: 100%;
+  }
+  article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
+    font-size: 38px;
+    text-align: center;
+  }
+  article#about .container section.aboutDetails {
+    height: unset;
+    min-height: 100%;
+  }
+  article#about .container section.aboutDetails .backBtn {
+    position: fixed;
+    top: unset;
+    right: unset;
+    left: 0;
+    bottom: 0;
+    height: 42px;
+    font-size: 16px;
+    padding: 6px;
+    z-index: 999;
+    border-bottom-left-radius: unset;
+  }
+  article#about .container section.aboutDetails .open {
+    border-top: 1px solid #0a4c7e;
+  }
+  article#about .container section.aboutDetails .open img {
+    height: 100%;
+  }
+  article#about .container section.aboutDetails .top {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  article#about .container section.aboutDetails .top .side {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-left: none;
+  }
+  article#about .container section.aboutDetails .top .side .first {
+    height: 100%;
+  }
+  article#about .container section.aboutDetails .top .side .two {
+    height: 100%;
+  }
+  article#about .container section.aboutDetails .top .side .three {
+    height: 100%;
+  }
+  article#about .container section.aboutDetails .top .main {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  article#about .container section.aboutDetails .top .main .four {
+    padding: 0;
+    border: none;
+    display: block;
+  }
+  article#about .container section.aboutDetails .top .main .four .content p {
+    text-shadow: 1px 1px 2px  black;
+    margin: 0;
+    padding: 10px;
+    padding-top: 34px;
+    font-size: 16px;
+  }
+  article#about .container section.aboutDetails .bottom {
+    height: 100%;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  article#about .container section.aboutDetails .bottom div {
+    width: 100%;
+    border-left: none;
+  }
+  article#about .container section.aboutDetails .bottom div:last-child {
+    border-right: none;
+  }
+  .overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .overlay .modal {
+    background: none;
+    height: 100%;
+    width: 100%;
+    border: unset;
+  }
+  .overlay .modal .close-modal {
+    top: unset;
+    bottom: 50px;
+    right: 20px;
+    border: none;
+  }
+  .overlay .modal img {
+    max-width: 100%;
+    border: 2px solid #0a4c7e;
+  }
+}
+
 article#store .subpageTitle {
   color: #0a4c7e;
   text-align: center;
@@ -1179,316 +1722,6 @@ article .container {
   }
   article .container {
     padding: 10px;
-  }
-}
-
-@media (max-width: 767px) {
-  article#about {
-    margin-top: 50px;
-    min-height: calc(100vh - 92px);
-    padding-top: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
-  article#about .container {
-    padding: 0;
-  }
-  article#about .container .aboutIntro {
-    min-height: calc(100vh - 92px);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro {
-    height: calc((100vh - 92px) / 6);
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.wedding {
-    background-image: url(/images/about/wedding0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.brideGroom {
-    background-image: url(/images/about/groomBride0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.children {
-    background-image: url(/images/about/children0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.family {
-    background-image: url(/images/about/family0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.artistic {
-    background-image: url(/images/about/artistic0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.landscapes {
-    background-image: url(/images/about/landscapes0.jpg);
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .closeBtn {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    top: 70px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    cursor: pointer;
-    color: red;
-    display: none;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .closeBtn img {
-    width: 100%;
-    padding: 20px;
-    opacity: 0.5;
-    transition: opacity .1s ease-in-out;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .closeBtn:hover img {
-    opacity: 1;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .boxTitle {
-    font-size: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    background: rgba(4, 70, 120, 0.4);
-    width: 100%;
-    height: 100%;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    transition: all .8s ease-in-out;
-    cursor: pointer;
-    color: #ffffff;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .boxTitle:hover {
-    background: rgba(0, 0, 0, 0.1);
-    text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn {
-    position: absolute;
-    bottom: 0;
-    color: #ffffff;
-    background: #0a4c7e;
-    padding: 10px;
-    display: none;
-    width: 260px;
-    text-align: center;
-    font-size: 18px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0 -2px 4px black;
-    transition: all .3s ease-in-out;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro .showMoreBtn:hover {
-    background: #0a257e;
-    box-shadow: 0 -1px 2px black;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.grow {
-    position: absolute;
-    top: 0;
-    min-height: calc(100vh - 42px);
-    width: 100%;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.grow .closeBtn {
-    display: block;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.grow .boxTitle {
-    background: rgba(0, 0, 0, 0);
-    cursor: default;
-    font-size: 38px;
-    text-align: center;
-    text-shadow: 0 0 2px black, 0 0 6px black, 0 0 10px black;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.grow .showMoreBtn {
-    display: block;
-  }
-  article#about .container .aboutIntro .aboutBoxIntro.hide {
-    display: none;
-  }
-  article#about .container section.aboutDetails {
-    min-height: 100vh;
-    display: none;
-    position: relative;
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
-  article#about .container section.aboutDetails.wedding .four {
-    background: url(/images/about/wedding4.jpg);
-  }
-  article#about .container section.aboutDetails.brideGroom .four {
-    background: url(/images/about/groomBride4.jpg);
-    background-position: bottom;
-  }
-  article#about .container section.aboutDetails.children .four {
-    background: url(/images/about/children4.jpg);
-    background-position: bottom;
-  }
-  article#about .container section.aboutDetails.family .four {
-    background: url(/images/about/family2.jpg);
-  }
-  article#about .container section.aboutDetails.artistic .four {
-    background: url(/images/about/artistic4.jpg);
-  }
-  article#about .container section.aboutDetails.landscapes .four {
-    background: url(/images/about/landscapes4.jpg);
-  }
-  article#about .container section.aboutDetails .backBtn {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    height: 42px;
-    color: #ffffff;
-    background: #0a4c7e;
-    font-size: 16px;
-    padding: 6px;
-    box-shadow: -1px 1px 4px black;
-    z-index: 999;
-    transition: all .3s ease-in-out;
-  }
-  article#about .container section.aboutDetails .backBtn:hover {
-    background: #0a257e;
-    box-shadow: 1px -1px 4px black;
-  }
-  article#about .container section.aboutDetails .open {
-    border-top: 1px solid #0a4c7e;
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  article#about .container section.aboutDetails .open .fa-search-plus {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 100px;
-    font-weight: bold;
-    color: #0a4c7e;
-    opacity: 0;
-  }
-  article#about .container section.aboutDetails .open img {
-    height: 100%;
-    width: 100%;
-    opacity: .8;
-    transition: all .3s ease-in-out;
-  }
-  article#about .container section.aboutDetails .open:hover {
-    cursor: pointer;
-  }
-  article#about .container section.aboutDetails .open:hover img {
-    opacity: 1;
-  }
-  article#about .container section.aboutDetails .open:hover .fa-search-plus {
-    opacity: 1;
-  }
-  article#about .container section.aboutDetails .top {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-  }
-  article#about .container section.aboutDetails .top .side {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    width: 100%;
-    height: 100%;
-  }
-  article#about .container section.aboutDetails .top .side .first {
-    overflow: hidden;
-    height: 100%;
-  }
-  article#about .container section.aboutDetails .top .side .two {
-    overflow: hidden;
-    height: 100%;
-  }
-  article#about .container section.aboutDetails .top .side .three {
-    height: 100%;
-  }
-  article#about .container section.aboutDetails .top .main {
-    display: -ms-flexbox;
-    display: flex;
-  }
-  article#about .container section.aboutDetails .top .main .four {
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-  }
-  article#about .container section.aboutDetails .top .main .four .content p {
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    text-shadow: 1px 1px 2px  black;
-    color: #ffffff;
-    padding: 10px;
-    padding-top: 34px;
-    font-size: 16px;
-    text-align: center;
-    letter-spacing: 2px;
-  }
-  article#about .container section.aboutDetails .bottom {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-  }
-  article#about .container section.aboutDetails.show {
-    display: -ms-flexbox;
-    display: flex;
-    visibility: visible;
-  }
-  .overlay {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-  }
-  .overlay .modal {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    display: none;
-  }
-  .overlay .modal .close-modal {
-    position: absolute;
-    bottom: 50px;
-    right: 20px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-  }
-  .overlay .modal.open {
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .overlay .modal img {
-    max-width: 100%;
-    border: 4px solid #0a4c7e;
-  }
-  .overlay.open {
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */
