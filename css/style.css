@@ -243,7 +243,6 @@ article#about .container .aboutIntro .aboutBoxIntro.hide {
 article#about .container section.aboutDetails {
   height: calc(100vh - 150px);
   display: none;
-  visibility: hidden;
   position: relative;
   -ms-flex-direction: column;
       flex-direction: column;
@@ -440,7 +439,6 @@ article#about .container section.aboutDetails .bottom div:last-child {
 article#about .container section.aboutDetails.show {
   display: -ms-flexbox;
   display: flex;
-  visibility: visible;
 }
 
 .overlay {

@@ -138,7 +138,7 @@ article#about {
     section.aboutDetails {
       height: calc(100vh - 150px);
       display: none;
-      visibility: hidden;
+      // visibility: hidden;
       position: relative;
       flex-direction: column;
 
@@ -328,7 +328,7 @@ article#about {
 
       &.show {
         display: flex;
-        visibility: visible;
+        // visibility: visible;
       }
     }
   }
@@ -379,6 +379,7 @@ article#about {
   }
 }
 
+
 @media (max-width: 767px) {
 
   article#about {
@@ -389,30 +390,30 @@ article#about {
     flex-direction: column;
 
     .container {
-  
+
       .aboutIntro {
         min-height: calc(100vh - 92px);
         flex-direction: column;
         flex-wrap: nowrap;
-        
+
         .aboutBoxIntro {
           width: 100%;
           height: calc((100vh - 92px) / 6);
-  
+
           .closeBtn {
             width: 60px;
             height: 60px;
             top: 70px;
           }
-  
+
           .boxTitle {
             font-size: 20px;
           }
-  
+
           .showMoreBtn {
             font-size: 18px;
           }
-  
+
           &.grow {
             top: 0;
             min-height: calc(100vh - 42px);
@@ -425,11 +426,11 @@ article#about {
           }
         }
       }
-  
+
       section.aboutDetails {
         height: unset;
         min-height: 100%;
-  
+
         .backBtn {
           position: fixed;
           top: unset;
@@ -442,49 +443,49 @@ article#about {
           z-index: 999;
           border-bottom-left-radius: unset;
         }
-  
+
         .open {
           border-top: 1px solid $color-blue;
-  
+
           img {
             height: 100%;
           }
         }
-        
+
         .top {
           flex-direction: column-reverse;
           justify-content: center;
           align-items: center;
-  
+
           .side {
             display: flex;
             flex-direction: column;
             width: 100%;
             height: 100%;
             border-left: none;
-  
+
             .first {
               height: 100%;
             }
-  
+
             .two {
               height: 100%;
             }
-  
+
             .three {
               height: 100%;
             }
           }
-  
+
           .main {
             display: flex;
             width: 100%;
-  
+
             .four {
               padding: 0;
               border: none;
               display: block;
-  
+
               .content {
                 p {
                   text-shadow: 1px 1px 2px  black;
@@ -497,15 +498,15 @@ article#about {
             }
           }
         }
-  
+
         .bottom {
           height: 100%;
           flex-direction: column;
-  
+
           div {
             width: 100%;
             border-left: none;
-  
+
             &:last-child {
               border-right: none;
             }
@@ -514,25 +515,25 @@ article#about {
       }
     }
   }
-  
+
   .overlay {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  
+
     .modal {
       background: none;
       height: 100%;
       width: 100%;
       border: unset;
-  
+
       .close-modal {
         top: unset;
         bottom: 50px;
         right: 20px;
         border: none;
       }
-  
+
       img {
         max-width: 100%;
         border: 2px solid $color-blue;
