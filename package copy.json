@@ -1,5 +1,5 @@
 {
-  "name": "picture-shop",
+  "name": "rock-paper-scissors",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -22,12 +22,12 @@
   "keywords": [],
   "dependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.26.7",
     "globstar": "^1.0.0",
     "mkdirp": "^1.0.4",
+    "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "nu-html-checker": "^0.1.0",
-    "onchange": "^7.1.0",
-    "sass": "^1.57.1"
+    "onchange": "^7.0.2"
   }
 }
